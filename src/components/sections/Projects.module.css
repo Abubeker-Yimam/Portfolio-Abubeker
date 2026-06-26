@@ -1,0 +1,89 @@
+.section {
+  padding: 5rem 0;
+}
+
+.heading {
+  font-size: 2rem;
+  color: var(--foreground);
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 200px;
+  background-color: var(--card-border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px -15px rgba(0,0,0,0.2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.folderIcon {
+  color: var(--primary);
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.linkIcon {
+  color: var(--muted-foreground);
+  transition: color 0.2s ease;
+}
+
+.linkIcon:hover {
+  color: var(--primary);
+}
+
+.title {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
