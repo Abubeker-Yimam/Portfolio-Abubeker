@@ -32,3 +32,10 @@
 .contactBtn:hover {
   background-color: rgba(56, 189, 248, 0.1); /* Slightly tinted background */
 }
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

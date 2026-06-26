@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
+});
 
 export const metadata: Metadata = {
-  title: "Abubeker Yimam | Frontend Developer",
-  description: "Portfolio of Abubeker Yimam, a passionate frontend developer crafting elegant, responsive digital experiences.",
+  title: "Abubeker Yimam | Full Stack Developer & QA Engineer",
+  description: "Portfolio of Abubeker Yimam — Full Stack Developer & QA Engineer building robust, end-to-end web applications with a passion for quality and clean code.",
 };
 
 export default function RootLayout({
@@ -18,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jakarta.className}>
         <Navbar />
         <main>{children}</main>
         <Footer />

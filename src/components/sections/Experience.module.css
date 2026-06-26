@@ -30,6 +30,14 @@
 
 .item {
   position: relative;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.item:hover {
+  background-color: var(--secondary);
+  transform: translateX(10px);
 }
 
 .item::before {
@@ -65,4 +73,28 @@
 .description {
   color: var(--muted-foreground);
   line-height: 1.6;
+}
+
+.companyLink {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+
+.companyLink::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.companyLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

@@ -1,42 +1,42 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0a0a;
-  
-  --primary: #0ea5e9; /* Light blue accent */
-  --primary-hover: #0284c7;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  
-  --muted: #f8fafc;
-  --muted-foreground: #64748b;
-  
-  --card: #ffffff;
-  --card-border: #e2e8f0;
 
-  --accent: #0ea5e9;
+  --primary: #7C3AED; /* Violet accent */
+  --primary-hover: #6D28D9;
+  --secondary: #f5f3ff;
+  --secondary-foreground: #1e1b4b;
+
+  --muted: #faf9ff;
+  --muted-foreground: #6b7280;
+
+  --card: #ffffff;
+  --card-border: #e5e7eb;
+
+  --accent: #7C3AED;
   --accent-foreground: #ffffff;
 
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #030712; /* Deep dark blue/black */
-    --foreground: #f8fafc;
-    
-    --primary: #38bdf8; /* Bright cyan/blue accent */
-    --primary-hover: #7dd3fc;
-    --secondary: #1e293b;
-    --secondary-foreground: #f8fafc;
-    
-    --muted: #0f172a;
-    --muted-foreground: #94a3b8;
-    
-    --card: #0f172a;
-    --card-border: #1e293b;
-    
-    --accent: #38bdf8;
-    --accent-foreground: #030712;
+    --background: #09090b; /* Deep neutral dark */
+    --foreground: #fafafa;
+
+    --primary: #a78bfa; /* Luminous violet for dark mode */
+    --primary-hover: #c4b5fd;
+    --secondary: #1c1917;
+    --secondary-foreground: #fafafa;
+
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+
+    --card: #18181b;
+    --card-border: #27272a;
+
+    --accent: #a78bfa;
+    --accent-foreground: #09090b;
   }
 }
 
@@ -46,6 +46,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background-color: var(--background);
@@ -53,6 +57,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(124, 58, 237, 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.03) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(124, 58, 237, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
 a {
@@ -83,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: linear-gradient(to right, var(--primary), #818cf8);
+  background: linear-gradient(135deg, var(--primary) 0%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

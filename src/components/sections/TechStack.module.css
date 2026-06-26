@@ -1,0 +1,55 @@
+.section {
+  padding: 3rem 0;
+  overflow: hidden;
+  background-color: var(--card); /* Or slightly darker background */
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Gradient masks to fade out edges */
+.section::before,
+.section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.section::before {
+  left: 0;
+  background: linear-gradient(to right, var(--background), transparent);
+}
+
+.section::after {
+  right: 0;
+  background: linear-gradient(to left, var(--background), transparent);
+}
+
+.marquee {
+  display: flex;
+  gap: 3rem;
+  white-space: nowrap;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.techItem:hover {
+  color: var(--primary);
+}
